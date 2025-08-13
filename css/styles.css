@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background-color: #fff5ee; 
+  z-index: 0;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/img/imagen\ cupcackes\ fondo.png');
+  background-size: 200px;
+  background-repeat: repeat;
+  opacity: 0.30; /* visibilidad del fondo */
+  z-index: -1; /* hacer que el fondo vaya detrás */
+  pointer-events: none; 
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: rgba(243, 213, 149, 0.308);
+  backdrop-filter: blur(2px);
+}
+
+header div {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+
+nav ul il {
+  list-style: none;
+}
+
+button {
+  background-color: #f9c4c7;
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #f4a6ab; /* color al pasar el mouse */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* espacio entre bloques */
+  padding: 20px;
+  color: #2f2f2f;
+  max-width: none;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.drip-deco { /* posible decoracion */
+  /*background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23c1e1c1" fill-opacity="1" d="M0,64 C120,128 240,0 360,64 C480,128 600,32 720,64 C840,96 960,32 1080,64 C1200,96 1320,32 1440,64 L1440,320 L0,320 Z"></path></svg>') no-repeat top center;*/
+  /*background-image: url(../assets/img/Decoración\ drip.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  height: 120px;
+  margin-top: -1px;*/ 
+}
+
+.drip-deco.top { /* posible decoracion */
+  background-image: url(../assets/img/Decoración\ drip\ 2.png);
+  background-repeat: repeat-x;
+  background-position: top center;
+  background-size: auto 100%;
+  height: 100px;
+  margin-top: -1px; 
+}
+
+.titulos{
+  color: #f4a6ab;
+  font-family: "Playfair Display", serif;
+}
+
+.titulo-cinta { /* posible fondo */
+  background-color: #f9c4c7;
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 15px;
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  color: #6b4b3e;
+  box-shadow: inset 0 -3px 0 #f4a6ab;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.bloque {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.bloque img {
+  width: 200px;
+  height: auto;
+}
+
+.bloque div {
+  flex: 1;
+  text-align: left;
+}
+
+.capa-alta { /* posible fondo */
+  background-color: #fce4ec; 
+  padding: 40px 20px;
+  border-radius: 0 0 30px 30px;
+}
+
+.capa-media { /* posible fondo */
+  background-color: #d4f5d1; 
+  padding: 40px 20px;
+  border-radius: 0 0 30px 30px;
+}
+
+.capa-baja { /* posible fondo */
+  background-color: #f7e1c7; 
+  padding: 40px 20px;
+  border-radius: 0 0 30px 30px;
+}
+
+
+.texto {
+  font-family: "Quicksand", sans-serif;
+}
+
+.textoPregunta {
+  font-family: "Quicksand", sans-serif;
+  font-style: italic;
+}
+
+.separador-chispas { /* posible separador */
+  /*width: 100%;
+  height: 40px;
+  background: url('data:image/svg+xml;utf8,<svg width="400" height="40" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="20" r="5" fill="%23ff6f91"/><circle cx="55" cy="15" r="4" fill="%23fcd5ce"/><circle cx="95" cy="25" r="5" fill="%2388d8b0"/><circle cx="135" cy="18" r="4" fill="%23ff6f91"/><circle cx="175" cy="26" r="5" fill="%23fcd5ce"/><circle cx="215" cy="14" r="4" fill="%2388d8b0"/><circle cx="255" cy="28" r="5" fill="%23ff6f91"/><circle cx="295" cy="22" r="4" fill="%23fcd5ce"/><circle cx="335" cy="24" r="5" fill="%2388d8b0"/><circle cx="375" cy="17" r="4" fill="%23ff6f91"/></svg>') repeat-x center;
+  background-size: auto 40px;
+  margin: 0px 0;*/
+}
+
+.separador-estrellas { /* posible separador */
+  /*width: 100%;
+  height: 40px;
+  background: url('data:image/svg+xml;utf8,<svg width="180" height="40" xmlns="http://www.w3.org/2000/svg"><polygon points="10,15 12,20 17,20 13,23 15,28 10,25 5,28 7,23 3,20 8,20" fill="%23ffb347"/><polygon points="50,10 52,15 57,15 53,18 55,23 50,20 45,23 47,18 43,15 48,15" fill="%23ff6961"/><polygon points="90,20 92,25 97,25 93,28 95,33 90,30 85,33 87,28 83,25 88,25" fill="%23fdfd96"/><polygon points="130,12 132,17 137,17 133,20 135,25 130,22 125,25 127,20 123,17 128,17" fill="%23c1e1c1"/><polygon points="170,18 172,23 177,23 173,26 175,31 170,28 165,31 167,26 163,23 168,23" fill="%23f9c4c7"/></svg>') repeat-x center;
+  background-size: auto 40px;
+  margin: 0px 0;*/
+}
+
+/* Sobre Mi */
+.sobre-mi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px 20px;
+  gap: 20px;
+}
+
+.foto-perfil {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.texto-sobre-mi {
+  font-family: "Quicksand", sans-serif;
+  max-width: 600px;
+  color: #2f2f2f;
+  background-color: #f9c4c7;
+  padding: 40px 20px;
+  border-radius: 0 0 30px 30px;
+}
+
+/* Fondo pastel para el acordeón */
+.accordion-item {
+    background-color: #fde2e4; /* rosa pastel suave */
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Encabezado del acordeón */
+.accordion-button {
+    background-color: #fad2e1; /* rosa un poco más fuerte */
+    color: #6b4b3e; /* marrón pastel para el texto */
+    font-weight: bold;
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #fbc4ab; /* tono diferente al abrir */
+    color: #6b4b3e;
+}
+
+/* Cuerpo del acordeón */
+.accordion-body {
+    background-color: #fff5ee; /* color beige pastel del fondo de la web */
+    color: #5a4a42;
+}
+
+
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: column; 
+  background-color: rgba(249, 196, 199, 0.3); /* color encima del fondo */
+  padding: 20px;
+  backdrop-filter: blur(2px); /* desenfoque */
+}
+
+.fa-instagram {
+  font-size: 25px;
+}
+
+.fa-whatsapp {
+  font-size: 25px;
+}
+
+.links-footer {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* espacio entre imagen y link */
+}

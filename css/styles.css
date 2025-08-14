@@ -68,6 +68,45 @@ button:hover {
   background-color: #f4a6ab; /* color al pasar el mouse */
 }
 
+/* Ocultar hamburguesa en desktop */
+.hamburguesa {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/*Vista mobile*/
+@media (max-width: 768px) {
+  nav ul {
+    display: none; /* ocultar menú normal */
+    flex-direction: column;
+    gap: 0;
+    background-color: rgba(243, 213, 149, 0.308);
+    backdrop-filter: blur(2px);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    border-radius: 0 0 10px 10px;
+    z-index: 999;
+  }
+  
+  nav ul li a {
+    display: block;
+    margin: 0;
+    padding: 15px;
+  }
+
+  .hamburguesa {
+    display: block; /* mostrar hamburguesa en mobile */
+  }
+
+  nav ul.show {
+    display: flex; /* mostrar menú al hacer click */
+  }
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -77,16 +116,6 @@ main {
   max-width: none;
   margin: 0 auto;
   padding: 0px;
-}
-
-.drip-deco { /* posible decoracion */
-  /*background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23c1e1c1" fill-opacity="1" d="M0,64 C120,128 240,0 360,64 C480,128 600,32 720,64 C840,96 960,32 1080,64 C1200,96 1320,32 1440,64 L1440,320 L0,320 Z"></path></svg>') no-repeat top center;*/
-  /*background-image: url(../assets/img/Decoración\ drip.png);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-  height: 120px;
-  margin-top: -1px;*/ 
 }
 
 .drip-deco.top { /* posible decoracion */
@@ -161,22 +190,6 @@ main {
   font-style: italic;
 }
 
-.separador-chispas { /* posible separador */
-  /*width: 100%;
-  height: 40px;
-  background: url('data:image/svg+xml;utf8,<svg width="400" height="40" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="20" r="5" fill="%23ff6f91"/><circle cx="55" cy="15" r="4" fill="%23fcd5ce"/><circle cx="95" cy="25" r="5" fill="%2388d8b0"/><circle cx="135" cy="18" r="4" fill="%23ff6f91"/><circle cx="175" cy="26" r="5" fill="%23fcd5ce"/><circle cx="215" cy="14" r="4" fill="%2388d8b0"/><circle cx="255" cy="28" r="5" fill="%23ff6f91"/><circle cx="295" cy="22" r="4" fill="%23fcd5ce"/><circle cx="335" cy="24" r="5" fill="%2388d8b0"/><circle cx="375" cy="17" r="4" fill="%23ff6f91"/></svg>') repeat-x center;
-  background-size: auto 40px;
-  margin: 0px 0;*/
-}
-
-.separador-estrellas { /* posible separador */
-  /*width: 100%;
-  height: 40px;
-  background: url('data:image/svg+xml;utf8,<svg width="180" height="40" xmlns="http://www.w3.org/2000/svg"><polygon points="10,15 12,20 17,20 13,23 15,28 10,25 5,28 7,23 3,20 8,20" fill="%23ffb347"/><polygon points="50,10 52,15 57,15 53,18 55,23 50,20 45,23 47,18 43,15 48,15" fill="%23ff6961"/><polygon points="90,20 92,25 97,25 93,28 95,33 90,30 85,33 87,28 83,25 88,25" fill="%23fdfd96"/><polygon points="130,12 132,17 137,17 133,20 135,25 130,22 125,25 127,20 123,17 128,17" fill="%23c1e1c1"/><polygon points="170,18 172,23 177,23 173,26 175,31 170,28 165,31 167,26 163,23 168,23" fill="%23f9c4c7"/></svg>') repeat-x center;
-  background-size: auto 40px;
-  margin: 0px 0;*/
-}
-
 /* Sobre Mi */
 .sobre-mi {
   display: flex;
@@ -202,8 +215,29 @@ main {
   padding: 40px 20px;
   border-radius: 0 0 30px 30px;
 }
+/*Contacto*/
+.fondo-contacto {
+    background-color: #d4f5d1; 
+    backdrop-filter: blur(3px);
+}
 
-/* Fondo pastel para el acordeón */
+.icono-social {
+    background-color: #fff; /* fondo blanco circular */
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    color: #81c784; /* color del ícono */
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+}
+
+.icono-social:hover {
+    background-color: #a8e6cf; 
+    color: white; /* ícono blanco al hacer hover */
+    transform: scale(1.1);
+}
+
+/*Preguntas Frecuentes*/
 .accordion-item {
     background-color: #fde2e4; /* rosa pastel suave */
     border: none;
@@ -213,8 +247,8 @@ main {
 
 /* Encabezado del acordeón */
 .accordion-button {
-    background-color: #fad2e1; /* rosa un poco más fuerte */
-    color: #6b4b3e; /* marrón pastel para el texto */
+    background-color: #fad2e1; 
+    color: #6b4b3e; 
     font-weight: bold;
     box-shadow: none;
 }
@@ -226,7 +260,7 @@ main {
 
 /* Cuerpo del acordeón */
 .accordion-body {
-    background-color: #fff5ee; /* color beige pastel del fondo de la web */
+    background-color: #fff5ee; 
     color: #5a4a42;
 }
 

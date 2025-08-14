@@ -84,6 +84,7 @@ button:hover {
     gap: 0;
     background-color: rgba(243, 213, 149, 0.308);
     backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
     position: absolute;
     top: 100%;
     right: 0;

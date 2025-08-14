@@ -91,9 +91,6 @@ button:hover {
     width: 200px;
     border-radius: 0 0 10px 10px;
     z-index: 999;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
   }
   
   nav ul li a {

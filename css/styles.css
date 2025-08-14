@@ -107,8 +107,7 @@ button:hover {
   }
 
   nav ul.show {
-    opacity: 1;
-    visibility: visible;
+    display: flex; /* mostrar menú al hacer click */
   }
 }
 

@@ -1,0 +1,25 @@
+/* Sobre Mi */
+.sobre-mi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px 20px;
+  gap: 20px;
+}
+
+.foto-perfil {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.texto-sobre-mi {
+  font-family: "Quicksand", sans-serif;
+  max-width: 600px;
+  color: #2f2f2f;
+  background-color: #f9c4c7;
+  padding: 40px 20px;
+  border-radius: 0 0 30px 30px;
+}

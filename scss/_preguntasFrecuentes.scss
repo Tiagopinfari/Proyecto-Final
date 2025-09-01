@@ -1,0 +1,41 @@
+/* Preguntas Frecuentes */
+.accordion-item {
+  background-color: #fde2e4;
+  border: none;
+  border-radius: 8px;
+  margin: 0 auto 15px auto; // centrado con margen abajo
+  max-width: 1600px; // ancho máximo para no ocupar todo el viewport
+}
+
+.accordion-button {
+  background-color: #fad2e1;
+  color: #6b4b3e;
+  font-weight: bold;
+  box-shadow: none;
+  transition: background-color 0.3s ease;
+
+  &:not(.collapsed) {
+    background-color: #fbc4ab;
+    color: #6b4b3e;
+  }
+}
+
+.accordion-body {
+  background-color: #f8cdda;
+  color: #5a4a42;
+  padding: 15px 20px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 1.2s ease;
+}
+
+.accordion-collapse.show .accordion-body {
+  max-height: 500px; 
+  opacity: 1;
+}
+ 
+.textoPregunta {
+  font-family: "Quicksand", sans-serif;
+  font-style: italic;
+}

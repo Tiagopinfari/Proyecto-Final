@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/estilos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <title>Magdalena Pastelería</title>
     <script src="https://kit.fontawesome.com/42d7f4a0c7.js" crossorigin="anonymous"></script>
@@ -33,30 +33,27 @@
     <main>
         <div class="drip-deco top"></div> <!-- decoracion de arriba -->
         <h1 class="titulos titulo-cinta">Magdalena Pastelería</h1>
-        <section class="bloque capa-alta">
+        <section class="bloque capa-alta my-5 p-4 rounded-4 shadow-sm">
             <img src="./assets/img/logo magdalena pastelería sin fondo.png" alt="logo magdalena pasteleria">
             <div class="texto">
                 <p>Oportet uti solum de actibus prosequtionem et fugam, haec leniter et blandus et reservato.</p>
                 <p>Quae tibi placent quicunq prosunt aut diligebat multum, quod memor sis ad communia sunt ab initio minima. Quod si, exempli gratia, cupidum rerum in propria sunt ceramic calicem, admonere te solum Ceramic, quod sit generalis poculis, in cuius es tu cupidum. Deinde, si erumpit, non turbarentur.</p>
             </div>
         </section>
-        <div class="separador-chispas"></div> <!-- separador -->
-        <section class="bloque capa-media">
+        <section class="bloque capa-media my-5 p-4 rounded-4 shadow-sm">
             <div class="texto">
                 <p>Oportet uti solum de actibus prosequtionem et fugam, haec leniter et blandus et reservato.</p>
                 <p>Quae tibi placent quicunq prosunt aut diligebat multum, quod memor sis ad communia sunt ab initio minima. Quod si, exempli gratia, cupidum rerum in propria sunt ceramic calicem, admonere te solum Ceramic, quod sit generalis poculis, in cuius es tu cupidum. Deinde, si erumpit, non turbarentur.</p>
             </div>
             <img src="./assets/img/WhatsApp Image 2025-07-16 at 12.39.38.jpeg" alt="imagen producto 1">
         </section>
-        <div class="separador-estrellas"></div> <!-- separador -->
-        <section class="bloque capa-baja">
+        <section class="bloque capa-baja my-5 p-4 rounded-4 shadow-sm">
             <img src="./assets/img/WhatsApp Image 2025-07-16 at 12.39.37 (11).jpeg" alt="imagen producto 2">
             <div class="texto">
             <p>Oportet uti solum de actibus prosequtionem et fugam, haec leniter et blandus et reservato.</p>
             <p>Quae tibi placent quicunq prosunt aut diligebat multum, quod memor sis ad communia sunt ab initio minima. Quod si, exempli gratia, cupidum rerum in propria sunt ceramic calicem, admonere te solum Ceramic, quod sit generalis poculis, in cuius es tu cupidum. Deinde, si erumpit, non turbarentur.</p>
             </div>
         </section>
-        <div class="drip-deco"></div> <!-- decoracion de abajo -->
     </main>
     <footer>
         <div class="links-footer">
@@ -68,12 +65,32 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <script>
-    const hamburguesa = document.getElementById('hamburguesa');
-    const menu = document.getElementById('menu');
+        const hamburguesa = document.getElementById('hamburguesa');
+        const menu = document.getElementById('menu');
 
-    hamburguesa.addEventListener('click', () => {
-    menu.querySelector('ul').classList.toggle('show');
-    });
+        hamburguesa.addEventListener('click', () => {
+        menu.querySelector('ul').classList.toggle('show');
+        });
+    </script>
+    <script>
+        let lastScrollTop = 0;
+        const header = document.querySelector("header");
+
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScroll > lastScrollTop) {
+            // scroll hacia abajo → ocultar
+            header.classList.remove("visible");
+            header.classList.add("hidden");
+            } else {
+            // scroll hacia arriba → mostrar
+            header.classList.remove("hidden");
+            header.classList.add("visible");
+            }
+
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        });
     </script>
 </body>
 </html>

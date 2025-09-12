@@ -23,7 +23,7 @@
 }
 
 .capa-media {
-  background-color: #FFDAB9;
+  background-color: #FFECE3;
   padding: 40px 20px;
   border-radius: 0 0 30px 30px;
   max-width: 1100px;
@@ -31,7 +31,7 @@
 }
 
 .capa-baja {
-  background-color: #D0F4DE;
+  background-color: #E4FFB3;
   padding: 40px 20px;
   border-radius: 0 0 30px 30px;
   max-width: 1100px;
@@ -187,12 +187,14 @@
 
 body {
   position: relative;
+  flex: 1;
   background-color: #fff5ee;
   z-index: 0;
+  min-height: 100vh;
 }
 body::before {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -207,6 +209,12 @@ body::before {
 
 body.menu-open {
   overflow: hidden;
+}
+
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -319,14 +327,13 @@ button:hover {
   }
 }
 main {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 15px;
-  padding: 20px;
   color: #2f2f2f;
-  max-width: none;
   margin: 0 auto;
-  padding: 0px;
+  width: 100%;
 }
 
 .drip-deco.top {
@@ -362,6 +369,7 @@ main {
 
 /* Footer */
 footer {
+  margin-top: auto;
   display: flex;
   flex-direction: column;
   background-color: rgba(249, 196, 199, 0.3);

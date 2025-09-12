@@ -13,12 +13,14 @@
 
 body {
   position: relative;
+  flex: 1; // <-- clave, asegura que el body ocupa todo el espacio
   background-color: #fff5ee;
   z-index: 0;
+  min-height: 100vh; // <-- asegura que nunca quede más chico que la ventana
 
   &::before {
     content: "";
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -34,6 +36,12 @@ body {
 
 body.menu-open {
   overflow: hidden; // evita scrollear el fondo mientras el menú está abierto
+}
+
+html, body {
+  height: 100%; // que ocupe toda la pantalla
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -168,14 +176,13 @@ button {
 }
 
 main {
+  flex: 1; // ocupa todo el espacio disponible
   display: flex;
   flex-direction: column;
   gap: 15px;
-  padding: 20px;
   color: #2f2f2f;
-  max-width: none;
   margin: 0 auto;
-  padding: 0px;
+  width: 100%;
 }
 
 .drip-deco {
@@ -213,6 +220,7 @@ main {
 
 /* Footer */
 footer {
+  margin-top: auto;
   display: flex;
   flex-direction: column;
   background-color: rgba(249, 196, 199, 0.3);

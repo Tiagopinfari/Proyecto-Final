@@ -149,7 +149,7 @@
   border: none;
   border-radius: 8px;
   margin: 0 auto 15px auto;
-  max-width: 1600px;
+  max-width: 1100px;
 }
 
 .accordion-button {
@@ -374,23 +374,38 @@ main {
 
 /* Footer */
 footer {
-  margin-top: auto;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
   background-color: rgba(249, 196, 199, 0.3);
   padding: 20px;
   backdrop-filter: blur(2px);
 }
-footer .fa-instagram {
-  font-size: 25px;
-}
-footer .fa-whatsapp {
-  font-size: 25px;
-}
 footer .links-footer {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 5px;
+  gap: 8px;
+}
+footer .links-footer i {
+  font-size: 28px;
+  color: #6b4b3e;
+}
+footer .links-footer a {
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #6b4b3e;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+footer .links-footer a:hover {
+  transform: scale(1.05);
+  color: #f4a6ab;
 }
 
 /*# sourceMappingURL=estilos.css.map */
